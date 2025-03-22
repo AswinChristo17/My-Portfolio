@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aswin Christo - AI/ML Engineer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Particle Background Canvas -->
+  <canvas id="particleCanvas" class="particle-background"></canvas>
+
+  <!-- Header/Navigation -->
+  <header id="header" class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="gradient-text">AC</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-link" data-section="hero">Hero</button>
+        <button class="nav-link" data-section="about">About</button>
+        <button class="nav-link" data-section="experience">Experience</button>
+        <button class="nav-link" data-section="projects">Projects</button>
+        <button class="nav-link" data-section="skills">Skills</button>
+        <button class="nav-link" data-section="contact">Contact</button>
+      </nav>
+      <div class="social-icons">
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+        </a>
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="radial-gradient-bg"></div>
+      
+      <div class="container text-center">
+        <div class="profile-image-container">
+          <div class="profile-image-ring"></div>
+          <div class="profile-image-inner">
+            <img src="pho1.jpg" alt="Aswin Christo" class="profile-image">
+          </div>
+        </div>
+        
+        <h1 class="hero-title gradient-text">Aswin Christo</h1>
+        
+        <h2 class="hero-subtitle">
+          <span id="typed-text"></span>
+          <span class="cursor">|</span>
+        </h2>
+        
+        <div class="button-group">
+          <a href="#projects" class="button primary-button">View Projects</a>
+          <a href="#contact" class="button outline-button">Contact Me</a>
+        </div>
+        
+        <div class="scroll-indicator">
+          <a href="#about" class="scroll-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section with Terminal -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text">About Me</h2>
+        
+        <div class="terminal-container">
+          <div class="terminal-header">
+            <div class="terminal-button red"></div>
+            <div class="terminal-button yellow"></div>
+            <div class="terminal-button green"></div>
+            <div class="terminal-title">Aswin Christo ~ terminal</div>
+          </div>
+          <div id="terminal-content" class="terminal-content">
+            <div id="terminal-text"></div>
+            <span id="terminal-cursor" class="cursor">|</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text">Experience</h2>
+        
+        <div class="timeline">
+          <!-- Timeline line -->
+          <div class="timeline-line"></div>
+          
+          <!-- Experience item -->
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="badge purple-cyan-gradient">Sept 2024 - Feb 2025</div>
+              <h3 class="timeline-title">ML Engineer, Intern</h3>
+              <p class="timeline-subtitle">Zummit Infolabs</p>
+            </div>
+            
+            <div class="timeline-right">
+              <!-- Timeline dot -->
+              <div class="timeline-dot purple-cyan-gradient"></div>
+              
+              <div class="card">
+                <ul class="timeline-list">
+                  <li><span class="dot purple"></span>Gained practical experience in model development and deployment</li>
+                  <li><span class="dot cyan"></span>Worked with backend team to deploy ML models to production systems</li>
+                  <li><span class="dot emerald"></span>Used Python, TensorFlow/PyTorch, FastAPI for scalable deployments</li>
+                  <li><span class="dot purple"></span>Facilitated technical discussions for collaborative problem-solving</li>
+                  <li><span class="dot cyan"></span>Optimized model performance through hyperparameter tuning</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Positions of Responsibility -->
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="badge cyan-emerald-gradient">2023 - Present</div>
+              <h3 class="timeline-title">Leadership Roles</h3>
+              <p class="timeline-subtitle">Academic & Community</p>
+            </div>
+            
+            <div class="timeline-right">
+              <!-- Timeline dot -->
+              <div class="timeline-dot cyan-emerald-gradient"></div>
+              
+              <div class="card">
+                <div class="responsibility-item">
+                  <h4 class="responsibility-title">Office Bearer – Environmental Club (EVC)</h4>
+                  <ul class="timeline-list">
+                    <li><span class="dot emerald"></span>Led initiatives for environmental awareness and sustainability</li>
+                    <li><span class="dot cyan"></span>Organized tree plantation drives and eco-friendly campaigns</li>
+                  </ul>
+                </div>
+                
+                <div class="responsibility-item">
+                  <h4 class="responsibility-title">School Pupil Leader</h4>
+                  <p class="responsibility-subtitle">St. Michael's Matric Higher Secondary School</p>
+                  <ul class="timeline-list">
+                    <li><span class="dot purple"></span>Represented the student body and coordinated school events</li>
+                    <li><span class="dot cyan"></span>Fostered teamwork and discipline among students</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text">Projects</h2>
+        
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-index="0">
+            <div class="project-gradient purple-blue-gradient"></div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon purple-blue-gradient">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M12 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"></path><path d="M12 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path><path d="M12 14a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path><path d="M12 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>
+                </div>
+                <h3 class="project-title">Fine-Tuning LLaMA</h3>
+              </div>
+              
+              <p class="project-description">Fine-tuned LLaMA using Prefix Tuning, Freeze Tuning, PEFT, LoRA, and QLoRA to enhance model adaptability and efficiency.</p>
+              
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Optimized model performance while reducing computational overhead</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Leveraged quantization techniques for resource-constrained devices</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Adapted fine-tuning strategies for diverse applications</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Ensured scalable and efficient model updates</span>
+                </div>
+              </div>
+              
+              <div class="project-tags">
+                <span class="tag">LLM</span>
+                <span class="tag">PEFT</span>
+                <span class="tag">LoRA</span>
+                <span class="tag">QLoRA</span>
+              </div>
+              
+              <a href="#" class="button project-button purple-blue-gradient">View Project</a>
+            </div>
+            
+            <div class="project-accent"></div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="project-card" data-index="1">
+            <div class="project-gradient blue-cyan-gradient"></div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon blue-cyan-gradient">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M20 15h2"></path></svg>
+                </div>
+                <h3 class="project-title">Intelligent Emergency Response System</h3>
+              </div>
+              
+              <p class="project-description">Developed an AI-powered IERS using ESP32, smart sensors, CNN, and OpenCV to enhance accident detection and response.</p>
+              
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Real-time accident detection using computer vision and deep learning</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Automated emergency alerts with location details via IoT devices</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Adaptation to various environments for efficient response</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Rapid data transmission to emergency teams</span>
+                </div>
+              </div>
+              
+              <div class="project-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">IoT</span>
+                <span class="tag">CNN</span>
+                <span class="tag">OpenCV</span>
+              </div>
+              
+              <a href="#" class="button project-button blue-cyan-gradient">View Project</a>
+            </div>
+            
+            <div class="project-accent"></div>
+          </div>
+          
+          <!-- Project 3 -->
+          <div class="project-card" data-index="2">
+            <div class="project-gradient cyan-teal-gradient"></div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon cyan-teal-gradient">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </div>
+                <h3 class="project-title">AI-Powered Health Monitoring System</h3>
+              </div>
+              
+              <p class="project-description">Developed an AI-powered health monitoring platform integrating IoT-based wearables for continuous tracking of vital signs.</p>
+              
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Real-time monitoring of vital signs using IoT devices</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>AI personalization for health recommendations</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>Multi-language virtual assistant support</span>
+                </div>
+                <div class="highlight-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+                  <span>GDPR and HIPAA compliant data security</span>
+                </div>
+              </div>
+              
+              <div class="project-tags">
+                <span class="tag">IoT</span>
+                <span class="tag">AI</span>
+                <span class="tag">Health Tech</span>
+                <span class="tag">Data Security</span>
+              </div>
+              
+              <a href="#" class="button project-button cyan-teal-gradient">View Project</a>
+            </div>
+            
+            <div class="project-accent"></div>
+          </div>
+
+      <div class="project-card" data-index="3">
+        <div class="project-gradient cyan-teal-gradient"></div>
+        <div class="project-content">
+          <div class="project-header">
+            <div class="project-icon cyan-teal-gradient">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3 class="project-title">Anomaly Detection</h3>
+          </div>
+          
+          <p class="project-description">HHybrid CNN-SNN combines Farneback Optical Flow, Frame Differencing, DoG, LIF-based temporal processing, and Adam optimization for real-time anomaly detection.</p>
+          
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+              <span> Extracts and processes frames to identify motion and structural changes</span>
+            </div>
+            <div class="highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+              <span>Converts visual data into event-driven signals for efficient analysis</span>
+            </div>
+            <div class="highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+              <span>Uses both deep learning and spiking neurons to detect anomalies accurately</span>
+            </div>
+            <div class="highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+              <span>Optimized for quick detection with minimal computational power</span>
+            </div>
+          </div>
+          
+          <div class="project-tags">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">SNN</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">AI</span>
+            <span class="tag">Anomaly Detection</span>
+          </div>
+          
+          <a href="#" class="button project-button cyan-teal-gradient">View Project</a>
+        </div>
+        
+        <div class="project-accent"></div>
+      </div>
+
+
+
+  <div class="project-card" data-index="4">
+    <div class="project-gradient cyan-teal-gradient"></div>
+    <div class="project-content">
+      <div class="project-header">
+        <div class="project-icon cyan-teal-gradient">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+        </div>
+        <h3 class="project-title">AI-Powered Health Monitoring System</h3>
+      </div>
+      
+      <p class="project-description">Developed an AI-powered health monitoring platform integrating IoT-based wearables for continuous tracking of vital signs.</p>
+      
+      <div class="project-highlights">
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>Real-time monitoring of vital signs using IoT devices</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>AI personalization for health recommendations</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>Multi-language virtual assistant support</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>GDPR and HIPAA compliant data security</span>
+        </div>
+      </div>
+      
+      <div class="project-tags">
+        <span class="tag">IoT</span>
+        <span class="tag">AI</span>
+        <span class="tag">Health Tech</span>
+        <span class="tag">Data Security</span>
+      </div>
+      
+      <a href="#" class="button project-button cyan-teal-gradient">View Project</a>
+    </div>
+    
+    <div class="project-accent"></div>
+  </div>
+
+  <div class="project-card" data-index="5">
+    <div class="project-gradient cyan-teal-gradient"></div>
+    <div class="project-content">
+      <div class="project-header">
+        <div class="project-icon cyan-teal-gradient">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+        </div>
+        <h3 class="project-title">AI-Powered Health Monitoring System</h3>
+      </div>
+      
+      <p class="project-description">Developed an AI-powered health monitoring platform integrating IoT-based wearables for continuous tracking of vital signs.</p>
+      
+      <div class="project-highlights">
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>Real-time monitoring of vital signs using IoT devices</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>AI personalization for health recommendations</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>Multi-language virtual assistant support</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m9 18 6-6-6-6"></path></svg>
+          <span>GDPR and HIPAA compliant data security</span>
+        </div>
+      </div>
+      
+      <div class="project-tags">
+        <span class="tag">IoT</span>
+        <span class="tag">AI</span>
+        <span class="tag">Health Tech</span>
+        <span class="tag">Data Security</span>
+      </div>
+      
+      <a href="#" class="button project-button cyan-teal-gradient">View Project</a>
+    </div>
+    
+    <div class="project-accent"></div>
+  </div>
+
+</div>
+</div>
+
+
+
+    </section>
+
+    <!-- Skills Section with Neural Network -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text">Skills</h2>
+        
+        <div class="neural-network-container">
+          <canvas id="neuralNetworkCanvas" class="neural-network"></canvas>
+        </div>
+        
+        <div class="skills-grid">
+          <!-- Skill orbs will be generated by JavaScript -->
+        </div>
+        
+        <div class="other-skills">
+          <span class="tag">C</span>
+          <span class="tag">Java</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Flask</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Leadership</span>
+          <span class="tag">Time Management</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Adaptability</span>
+          <span class="tag">Creativity</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text">Education</h2>
+        
+        <div class="education-grid">
+          <div class="card education-card">
+            <div class="card-gradient purple-cyan-gradient"></div>
+            <div class="card-content">
+              <h3 class="education-title">B.E CSE (AI&ML)</h3>
+              <p class="education-subtitle">Dr. Mahalingam College of Engineering and Technology</p>
+              <div class="education-details">
+                <span>2023 - Present</span>
+                <span class="cyan-text">CGPA: 8.2/10</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card education-card">
+            <div class="card-gradient cyan-emerald-gradient"></div>
+            <div class="card-content">
+              <h3 class="education-title">Higher Secondary Education</h3>
+              <p class="education-subtitle">St Michael's Hr. Sec. School, Kattathurai</p>
+              <div class="education-details">
+                <span>Completed</span>
+                <span class="emerald-text">87.5%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="subsection-title">Certifications</h3>
+        
+        <div class="education-grid">
+          <div class="card certification-card">
+            <div class="card-content">
+              <h4 class="certification-title">Linguaskill English Certification (B2 Level)</h4>
+              <p class="certification-subtitle">Cambridge Assessment English</p>
+              <p class="certification-date">May 2024</p>
+            </div>
+          </div>
+          
+          <div class="card certification-card">
+            <div class="card-content">
+              <h4 class="certification-title">NPTEL Certification in C Programming</h4>
+              <p class="certification-subtitle">National Programme on Technology Enhanced Learning (NPTEL)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title gradient-text">Contact</h2>
+        
+        <div class="card contact-card">
+          <div class="card-gradient full-gradient"></div>
+          <div class="card-content">
+            <div class="contact-grid">
+              <div class="contact-info">
+                <div>
+                  <h3 class="contact-title">Get In Touch</h3>
+                  <p class="contact-description">
+                    I'm always open to discussing new projects, opportunities, or partnerships.
+                  </p>
+                </div>
+                
+                <div class="contact-details">
+                  <div class="contact-item">
+                    <div class="contact-icon purple-cyan-gradient">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    </div>
+                    <div>
+                      <p class="contact-label">Email</p>
+                      <p class="contact-value">aswinchristo17@gmail.com</p>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-item">
+                    <div class="contact-icon cyan-emerald-gradient">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div>
+                      <p class="contact-label">Phone</p>
+                      <p class="contact-value">+91 8122874841</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="contact-form">
+                <div class="form-group">
+                  <input type="text" placeholder="Your Name" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                  <input type="email" placeholder="Your Email" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                  <textarea placeholder="Your Message" rows="4" class="form-input"></textarea>
+                </div>
+                
+                <button class="button full-gradient-button">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-social">
+        <a href="#" class="footer-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+        </a>
+        <a href="#" class="footer-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a  class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="#" class="footer-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        </a>
+      </div>
+      <p class="footer-text">
+        © <span id="current-year"></span> Aswin Christo. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
