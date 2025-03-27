@@ -516,7 +516,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   }
-  
+
+
   // Project Cards Hover Effect
   function initProjectCards() {
     const projectCards = document.querySelectorAll(".project-card")
