@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - Aswin Christo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0f;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        .loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.95), rgba(10, 10, 15, 0.98));
+        }
+
+        .neural-network-animation {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .node {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(45deg, #9c6cff, #2d9cdb);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .connection {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(156, 108, 255, 0.2), rgba(45, 156, 219, 0.2));
+            transform-origin: left center;
+            animation: connect 2s infinite;
+        }
+
+        .loading-text {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .loading-text span {
+            display: inline-block;
+            animation: fadeInOut 1.5s infinite;
+        }
+
+        .loading-progress {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #9c6cff, #2d9cdb);
+            width: 0%;
+            animation: progress 3s ease-in-out forwards;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        @keyframes connect {
+            0% { transform: scaleX(0); opacity: 0; }
+            50% { transform: scaleX(1); opacity: 0.5; }
+            100% { transform: scaleX(0); opacity: 0; }
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            background: linear-gradient(45deg, rgba(156, 108, 255, 0.1), rgba(45, 156, 219, 0.1));
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(100px, 100px) rotate(180deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape" style="width: 100px; height: 100px; top: 10%; left: 10%;"></div>
+        <div class="shape" style="width: 150px; height: 150px; top: 60%; left: 80%;"></div>
+        <div class="shape" style="width: 80px; height: 80px; top: 80%; left: 20%;"></div>
+    </div>
+
+    <div class="loading-container">
+        <div class="neural-network-animation" id="neuralNetwork">
+            <!-- Nodes and connections will be added dynamically -->
+        </div>
+        <div class="loading-text">
+            <span>I</span>
+            <span>n</span>
+            <span>i</span>
+            <span>t</span>
+            <span>i</span>
+            <span>a</span>
+            <span>l</span>
+            <span>i</span>
+            <span>z</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+            <span>&nbsp;</span>
+            <span>A</span>
+            <span>I</span>
+            <span>&nbsp;</span>
+            <span>S</span>
+            <span>y</span>
+            <span>s</span>
+            <span>t</span>
+            <span>e</span>
+            <span>m</span>
+            <span>s</span>
+        </div>
+        <div class="loading-progress">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const neuralNetwork = document.getElementById('neuralNetwork');
+            
+            // Create nodes
+            const numNodes = 15;
+            const nodes = [];
+            
+            for (let i = 0; i < numNodes; i++) {
+                const node = document.createElement('div');
+                node.className = 'node';
+                
+                // Random position within the container
+                const x = Math.random() * 280 + 10;
+                const y = Math.random() * 280 + 10;
+                
+                node.style.left = `${x}px`;
+                node.style.top = `${y}px`;
+                
+                neuralNetwork.appendChild(node);
+                nodes.push({ x, y });
+            }
+            
+            // Create connections
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    if (Math.random() < 0.3) { // 30% chance of connection
+                        const connection = document.createElement('div');
+                        connection.className = 'connection';
+                        
+                        const dx = nodes[j].x - nodes[i].x;
+                        const dy = nodes[j].y - nodes[i].y;
+                        const length = Math.sqrt(dx * dx + dy * dy);
+                        const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+                        
+                        connection.style.width = `${length}px`;
+                        connection.style.left = `${nodes[i].x}px`;
+                        connection.style.top = `${nodes[i].y}px`;
+                        connection.style.transform = `rotate(${angle}deg)`;
+                        
+                        neuralNetwork.appendChild(connection);
+                    }
+                }
+            }
+
+            // Redirect to main page after animation
+            setTimeout(() => {
+                window.location.href = 'main.html';
+            }, 3000);
+        });
+    </script>
+</body>
+</html> 
