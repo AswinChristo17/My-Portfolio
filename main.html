@@ -14,11 +14,11 @@
     // Check if this is a page refresh
     if (performance.navigation && performance.navigation.type === 1) {
       // This is a refresh, redirect to loading
-      window.location.href = 'loading.html';
+      window.location.href = 'index.html';
     } else if (window.performance && window.performance.getEntriesByType && window.performance.getEntriesByType('navigation').length) {
       // Modern browsers use this method
       if (window.performance.getEntriesByType('navigation')[0].type === 'reload') {
-        window.location.href = 'loading.html';
+        window.location.href = 'index.html';
       }
     }
   </script>
